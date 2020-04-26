@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:headphone_strore/screens/item_full_screen.dart';
 import 'package:headphone_strore/utils/colors.dart';
 
 class ItemDetails extends StatelessWidget {
@@ -135,43 +136,58 @@ class ItemDetails extends StatelessWidget {
                         ),
                       ),
                       Expanded(
-                        child: Center(
-                          child: Container(
-                            alignment: Alignment.center,
-                            margin: EdgeInsets.all(16),
-                            height: 200,
-                            decoration: BoxDecoration(
-                                color: Color(0xff17222b),
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 12,
-                                    color: Color(0xff0d1419),
-                                    offset: Offset(
-                                      5,
-                                      5,
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                            context,
+                            PageRouteBuilder(
+                              pageBuilder: (c, a1, a2) => ItemFullScreen(),
+                              transitionsBuilder: (c, anim, a2, child) =>
+                                  FadeTransition(opacity: anim, child: child),
+                              transitionDuration: Duration(milliseconds: 300),
+                              opaque: true,
+                            ),
+                          ),
+                          child: Center(
+                            child: Container(
+                              alignment: Alignment.center,
+                              margin: EdgeInsets.all(16),
+                              height: 200,
+                              decoration: BoxDecoration(
+                                  color: Color(0xff17222b),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 12,
+                                      color: Color(0xff0d1419),
+                                      offset: Offset(
+                                        5,
+                                        5,
+                                      ),
                                     ),
-                                  ),
-                                  BoxShadow(
-                                    blurRadius: 12,
-                                    color: Color(0xff21303d),
-                                    offset: Offset(
-                                      -5,
-                                      -5,
+                                    BoxShadow(
+                                      blurRadius: 12,
+                                      color: Color(0xff21303d),
+                                      offset: Offset(
+                                        -5,
+                                        -5,
+                                      ),
                                     ),
+                                  ],
+                                  gradient: LinearGradient(
+                                    stops: [0, 1],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [Color(0xff151f27), Color(0xff19242e)],
                                   ),
-                                ],
-                                gradient: LinearGradient(
-                                  stops: [0, 1],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                  colors: [Color(0xff151f27), Color(0xff19242e)],
+                                  borderRadius: BorderRadius.all(Radius.circular(
+                                    25,
+                                  ))),
+                              child: Hero(
+                                tag: "item",
+                                child: Image.asset(
+                                  'assets/headphones.png',
+                                  height: 150,
                                 ),
-                                borderRadius: BorderRadius.all(Radius.circular(
-                                  25,
-                                ))),
-                            child: Image.asset(
-                              'assets/headphones.png',
-                              height: 150,
+                              ),
                             ),
                           ),
                         ),
