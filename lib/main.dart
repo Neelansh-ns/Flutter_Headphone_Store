@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:headphone_strore/screens/brand_names.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
   SystemChrome.setEnabledSystemUIOverlays([]);
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(

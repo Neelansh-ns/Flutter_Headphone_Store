@@ -36,7 +36,7 @@ class BrandNames extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 12),
+                padding: const EdgeInsets.only(bottom: 24,top: 12),
                 child: Stack(
                   alignment: Alignment.center,
                   children: <Widget>[
@@ -59,7 +59,7 @@ class BrandNames extends StatelessWidget {
                       child: Container(
                         color: ColorsDesign.blackBlue,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
                           child: Text("TOP PICK",
                               style: TextStyle(
                                 fontFamily: 'Roboto',
@@ -80,7 +80,11 @@ class BrandNames extends StatelessWidget {
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: names.asMap().entries.map((entry) {
-                        return BrandCard(logo: logos[entry.key], title: entry.value);
+                        return Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.only(bottom: 32),
+                              child: BrandCard(logo: logos[entry.key], title: entry.value),
+                            ));
                       }).toList()),
                 ),
               ),
