@@ -36,7 +36,7 @@ class BrandNames extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(bottom: 24,top: 12),
+                padding: const EdgeInsets.only(bottom: 24, top: 12),
                 child: Stack(
                   alignment: Alignment.center,
                   children: <Widget>[
@@ -82,9 +82,9 @@ class BrandNames extends StatelessWidget {
                       children: names.asMap().entries.map((entry) {
                         return Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.only(bottom: 32),
-                              child: BrandCard(logo: logos[entry.key], title: entry.value),
-                            ));
+                          padding: const EdgeInsets.only(bottom: 32),
+                          child: BrandCard(logo: logos[entry.key], title: entry.value),
+                        ));
                       }).toList()),
                 ),
               ),

@@ -19,8 +19,7 @@ class BrandCard extends StatelessWidget {
         child: Stack(
           overflow: Overflow.visible,
           children: <Widget>[
-            Container(
-                decoration: BoxDecoration(color: Color(0xff1f2e3b))),
+            Container(decoration: BoxDecoration(color: Color(0xff1f2e3b))),
             Positioned(
               right: 16,
               top: 24,
