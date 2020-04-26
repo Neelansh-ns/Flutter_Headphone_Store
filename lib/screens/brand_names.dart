@@ -76,7 +76,7 @@ class BrandNames extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 72, right: 48),
+                  padding: const EdgeInsets.only(left: 72, right: 36),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: names.asMap().entries.map((entry) {

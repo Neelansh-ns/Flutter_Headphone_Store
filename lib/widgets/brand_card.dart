@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:headphone_strore/screens/item_details.dart';
 
 class BrandCard extends StatelessWidget {
   final Widget logo;
@@ -12,19 +13,22 @@ class BrandCard extends StatelessWidget {
     return InkWell(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BrandCard()),
+        MaterialPageRoute(builder: (context) => ItemDetails(title)),
       ),
       child: Container(
         child: Stack(
           overflow: Overflow.visible,
           children: <Widget>[
-            Container(height: 160, decoration: new BoxDecoration(color: Color(0xff1f2e3b))),
+            Container(height: 120, decoration: new BoxDecoration(color: Color(0xff1f2e3b))),
             Positioned(
-              right: 24,
-              top: 40,
-              bottom: 40,
+              right: 16,
+              top: 0,
+              bottom: 0,
               width: 90,
-              child: logo,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 24),
+                child: logo,
+              ),
             ),
             Positioned(
               left: -38,
@@ -34,6 +38,7 @@ class BrandCard extends StatelessWidget {
                 child: Text(title,
                     style: TextStyle(
                       fontFamily: 'Roboto',
+                      height: 1.5,
                       color: Color(0xffdcdcdc),
                       fontSize: 24,
                       fontWeight: FontWeight.w700,
