@@ -156,19 +156,19 @@ class ItemDetails extends StatelessWidget {
                                   color: Color(0xff17222b),
                                   boxShadow: [
                                     BoxShadow(
-                                      blurRadius: 12,
-                                      color: Color(0xff0d1419),
+                                      blurRadius: 12/4,
+                                      color: Color(0xff21303d),
                                       offset: Offset(
-                                        5,
-                                        5,
+                                        12/4,
+                                        12/4,
                                       ),
                                     ),
                                     BoxShadow(
-                                      blurRadius: 12,
-                                      color: Color(0xff21303d),
+                                      blurRadius: 12/6,
+                                      color: Color(0xff0d1419),
                                       offset: Offset(
-                                        -5,
-                                        -5,
+                                        -12/6,
+                                        -12/6,
                                       ),
                                     ),
                                   ],
@@ -360,5 +360,24 @@ class ItemDetails extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color _getAdjustColor(Color baseColor, double amount) {
+    Map<String, int> colors = {
+      'r': baseColor.red,
+      'g': baseColor.green,
+      'b': baseColor.blue
+    };
+
+    colors = colors.map((key, value) {
+      if (value + amount < 0) {
+        return MapEntry(key, 0);
+      }
+      if (value + amount > 255) {
+        return MapEntry(key, 255);
+      }
+      return MapEntry(key, (value + amount).floor());
+    });
+    return Color.fromRGBO(colors['r'], colors['g'], colors['b'], 1);
   }
 }
