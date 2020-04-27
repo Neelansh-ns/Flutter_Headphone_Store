@@ -41,7 +41,7 @@ class ItemFullScreen extends StatelessWidget {
                   colors: [Color(0xff151f27), Color(0xff19242e)],
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(
-                  25,
+                  15,
                 ))),
             child: Image.asset(
               'assets/headphones.png',
