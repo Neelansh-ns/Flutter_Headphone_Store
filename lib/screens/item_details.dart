@@ -85,7 +85,10 @@ class ItemDetails extends StatelessWidget {
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
                               fontStyle: FontStyle.normal,
-                            ))
+                            )),
+                        SizedBox(
+                          height: 16,
+                        )
                       ],
                     ),
                   ),
@@ -104,19 +107,19 @@ class ItemDetails extends StatelessWidget {
                             color: Color(0xff17222b),
                             boxShadow: [
                               BoxShadow(
-                                blurRadius: 10,
+                                blurRadius: 2,
                                 color: Color(0xff0d1419),
                                 offset: Offset(
-                                  5,
-                                  5,
+                                  2,
+                                  2,
                                 ),
                               ),
                               BoxShadow(
-                                blurRadius: 10,
+                                blurRadius: 2,
                                 color: Color(0xff21303d),
                                 offset: Offset(
-                                  -5,
-                                  -5,
+                                  -2,
+                                  -2,
                                 ),
                               ),
                             ],
@@ -203,19 +206,19 @@ class ItemDetails extends StatelessWidget {
                             color: Color(0xff17222b),
                             boxShadow: [
                               BoxShadow(
-                                blurRadius: 10,
+                                blurRadius: 2,
                                 color: Color(0xff0d1419),
                                 offset: Offset(
-                                  5,
-                                  5,
+                                  2,
+                                  2,
                                 ),
                               ),
                               BoxShadow(
-                                blurRadius: 10,
+                                blurRadius: 2,
                                 color: Color(0xff21303d),
                                 offset: Offset(
-                                  -5,
-                                  -5,
+                                  -2,
+                                  -2,
                                 ),
                               ),
                             ],
@@ -325,7 +328,7 @@ class ItemDetails extends StatelessWidget {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 48, top: 16),
+                      padding: const EdgeInsets.only(bottom: 32, top: 16),
                       child: Container(
                         height: 50,
                         alignment: Alignment.center,
@@ -333,19 +336,19 @@ class ItemDetails extends StatelessWidget {
                             color: Color(0xff17222b),
                             boxShadow: [
                               BoxShadow(
-                                blurRadius: 10,
+                                blurRadius: 4,
                                 color: Color(0xff0e1419),
                                 offset: Offset(
-                                  5,
-                                  5,
+                                  2,
+                                  2,
                                 ),
                               ),
                               BoxShadow(
-                                blurRadius: 10,
+                                blurRadius: 4,
                                 color: Color(0xff20303d),
                                 offset: Offset(
-                                  -5,
-                                  -5,
+                                  -2,
+                                  -2,
                                 ),
                               ),
                             ],
