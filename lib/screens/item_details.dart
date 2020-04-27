@@ -158,19 +158,19 @@ class ItemDetails extends StatelessWidget {
                                     color: Color(0xff17222b),
                                     boxShadow: [
                                       BoxShadow(
-                                        blurRadius: 12/4,
+                                        blurRadius: 12 / 4,
                                         color: Color(0xff21303d),
                                         offset: Offset(
-                                          12/4,
-                                          12/4,
+                                          12 / 4,
+                                          12 / 4,
                                         ),
                                       ),
                                       BoxShadow(
-                                        blurRadius: 12/6,
+                                        blurRadius: 12 / 6,
                                         color: Color(0xff0d1419),
                                         offset: Offset(
-                                          -12/6,
-                                          -12/6,
+                                          -12 / 6,
+                                          -12 / 6,
                                         ),
                                       ),
                                     ],
@@ -242,76 +242,90 @@ class ItemDetails extends StatelessWidget {
                 flex: 3,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("TROUBADOUR",
-                        style: TextStyle(
-                          fontFamily: 'Roboto',
-                          color: Color(0xffffffff),
-                          fontSize: 28,
-                          fontWeight: FontWeight.w700,
-                          fontStyle: FontStyle.normal,
-                          letterSpacing: 0.16,
-                        )),
-                    Stack(
-                      alignment: Alignment.center,
+                    Column(
                       children: <Widget>[
-                        Opacity(
-                          opacity: 0.7,
-                          child: new Container(
-                              width: 290,
-                              height: 2,
-                              decoration: new BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      Color(0xff1b2833),
-                                      Color(0xff949494),
-                                      Color(0xff1b2833)
-                                    ],
-                                    stops: [0, 0.5, 1],
-                                    begin: Alignment(-1.00, 0.00),
-                                    end: Alignment(1.00, -0.00),
-                                    // angle: 90,
-                                    // scale: undefined,
-                                  ))),
+                        Text("TROUBADOUR",
+                            style: TextStyle(
+                              fontFamily: 'Roboto',
+                              color: Color(0xffffffff),
+                              fontSize: 28,
+                              fontWeight: FontWeight.w700,
+                              fontStyle: FontStyle.normal,
+                              letterSpacing: 0.16,
+                            )),
+                        SizedBox(
+                          height: 8,
                         ),
-                        Positioned(
-                          child: Container(
-                            color: ColorsDesign.blackBlue,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: new Text("\$118.13",
-                                  style: TextStyle(
-                                    fontFamily: 'Roboto',
-                                    color: Color(0xff08d9cb),
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w700,
-                                    fontStyle: FontStyle.normal,
-                                  )),
+                        Column(
+                          children: <Widget>[
+                            Stack(
+                              alignment: Alignment.center,
+                              children: <Widget>[
+                                Opacity(
+                                  opacity: 0.7,
+                                  child: Container(
+                                      width: 290,
+                                      height: 2,
+                                      decoration: new BoxDecoration(
+                                          borderRadius: BorderRadius.circular(10),
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              Color(0xff1b2833),
+                                              Color(0xff949494),
+                                              Color(0xff1b2833)
+                                            ],
+                                            stops: [0, 0.5, 1],
+                                            begin: Alignment(-1.00, 0.00),
+                                            end: Alignment(1.00, -0.00),
+                                            // angle: 90,
+                                            // scale: undefined,
+                                          ))),
+                                ),
+                                Positioned(
+                                  child: Container(
+                                    color: ColorsDesign.blackBlue,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: new Text("\$118.13",
+                                          style: TextStyle(
+                                            fontFamily: 'Roboto',
+                                            color: Color(0xff08d9cb),
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w700,
+                                            fontStyle: FontStyle.normal,
+                                          )),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: itemDetails.map((detail) {
+                                  return Padding(
+                                    padding: const EdgeInsets.all(1.0),
+                                    child: Text("★  " + detail,
+                                        textAlign: TextAlign.left,
+                                        style: TextStyle(
+                                          fontFamily: 'Roboto',
+                                          color: Color(0xffffffff),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w400,
+                                          fontStyle: FontStyle.normal,
+                                        )),
+                                  );
+                                }).toList()),
+                          ],
                         ),
                       ],
                     ),
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: itemDetails.map((detail) {
-                          return Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: Text("★  " + detail,
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  color: Color(0xffffffff),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontStyle: FontStyle.normal,
-                                )),
-                          );
-                        }).toList()),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 24, top: 16),
+                      padding: const EdgeInsets.only(bottom: 48, top: 16),
                       child: Container(
                         height: 50,
                         alignment: Alignment.center,
@@ -366,11 +380,7 @@ class ItemDetails extends StatelessWidget {
   }
 
   Color _getAdjustColor(Color baseColor, double amount) {
-    Map<String, int> colors = {
-      'r': baseColor.red,
-      'g': baseColor.green,
-      'b': baseColor.blue
-    };
+    Map<String, int> colors = {'r': baseColor.red, 'g': baseColor.green, 'b': baseColor.blue};
 
     colors = colors.map((key, value) {
       if (value + amount < 0) {
