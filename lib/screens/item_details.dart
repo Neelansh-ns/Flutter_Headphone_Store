@@ -143,49 +143,52 @@ class ItemDetails extends StatelessWidget {
                               pageBuilder: (c, a1, a2) => ItemFullScreen(),
                               transitionsBuilder: (c, anim, a2, child) =>
                                   FadeTransition(opacity: anim, child: child),
-                              transitionDuration: Duration(milliseconds: 300),
+                              transitionDuration: Duration(milliseconds: 500),
                               opaque: true,
                             ),
                           ),
                           child: Center(
-                            child: Container(
-                              alignment: Alignment.center,
-                              margin: EdgeInsets.all(16),
-                              height: 200,
-                              decoration: BoxDecoration(
-                                  color: Color(0xff17222b),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 12/4,
-                                      color: Color(0xff21303d),
-                                      offset: Offset(
-                                        12/4,
-                                        12/4,
+                            child: Hero(
+                              tag: "item",
+                              child: Container(
+                                alignment: Alignment.center,
+                                margin: EdgeInsets.all(16),
+                                height: 200,
+                                decoration: BoxDecoration(
+                                    color: Color(0xff17222b),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 12/4,
+                                        color: Color(0xff21303d),
+                                        offset: Offset(
+                                          12/4,
+                                          12/4,
+                                        ),
                                       ),
-                                    ),
-                                    BoxShadow(
-                                      blurRadius: 12/6,
-                                      color: Color(0xff0d1419),
-                                      offset: Offset(
-                                        -12/6,
-                                        -12/6,
+                                      BoxShadow(
+                                        blurRadius: 12/6,
+                                        color: Color(0xff0d1419),
+                                        offset: Offset(
+                                          -12/6,
+                                          -12/6,
+                                        ),
                                       ),
+                                    ],
+                                    gradient: LinearGradient(
+                                      stops: [0, 1],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.bottomRight,
+                                      colors: [Color(0xff151f27), Color(0xff19242e)],
                                     ),
-                                  ],
-                                  gradient: LinearGradient(
-                                    stops: [0, 1],
-                                    begin: Alignment.topLeft,
-                                    end: Alignment.bottomRight,
-                                    colors: [Color(0xff151f27), Color(0xff19242e)],
+                                    borderRadius: BorderRadius.all(Radius.circular(
+                                      25,
+                                    ))),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(24.0),
+                                  child: Image.asset(
+                                    'assets/headphones.png',
+//                                  height: 150,
                                   ),
-                                  borderRadius: BorderRadius.all(Radius.circular(
-                                    25,
-                                  ))),
-                              child: Hero(
-                                tag: "item",
-                                child: Image.asset(
-                                  'assets/headphones.png',
-                                  height: 150,
                                 ),
                               ),
                             ),
