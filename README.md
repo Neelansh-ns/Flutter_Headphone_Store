@@ -1,6 +1,6 @@
-# headphone_strore
+# headphone_store
 
-Headphone Strore Concept Design
+Headphone Store Concept Design
 
 ## Getting Started
 
