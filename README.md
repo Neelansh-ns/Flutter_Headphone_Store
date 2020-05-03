@@ -2,6 +2,10 @@
 
 A Headphone Store Concept Design
 
+
+![](screenshots/rec.gif)
+
+
 ## Screenshots of the application
 
 A headphone store application made in Flutter, incorporating the neumorphic UI design, in the appropriate amount. The neumorphic UI buttons and placeholders were made super easy with help of Dart code generator for neumorphic widgets using [https://flutterneumorphism.com](https://flutterneumorphism.com).
