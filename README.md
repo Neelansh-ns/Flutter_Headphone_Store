@@ -1,16 +1,18 @@
-# headphone_store
+# Headphone Store
 
-Headphone Store Concept Design
+A Headphone Store Concept Design
 
-## Getting Started
+## Screenshots of the application
 
-This project is a starting point for a Flutter application.
+A headphone store application made in Flutter, incorporating the neumorphic UI design, in the appropriate amount. The neumorphic UI buttons and placeholders were made super easy with help of Dart code generator for neumorphic widgets using [https://flutterneumorphism.com](https://flutterneumorphism.com).
 
-A few resources to get you started if this is your first Flutter project:
+If you like the above tool, star the repo here: [Flutter-Neumorphism](https://github.com/Neelansh-ns/Flutter-Neumorphism)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Screen 0             |  Screen 1
+:-------------------------:|:-------------------------:
+![](screenshots/image1.png) | ![](screenshots/image1.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Design Credits
+
+The above designs were made by Yash Parashar.\
+Link: [https://dribbble.com/shots/11080842-Headphone-Store](https://dribbble.com/shots/11080842-Headphone-Store)
