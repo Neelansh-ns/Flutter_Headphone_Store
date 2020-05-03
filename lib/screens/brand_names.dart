@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:headphone_strore/utils/colors.dart';
-import 'package:headphone_strore/widgets/brand_card.dart';
+import 'package:headphone_store/utils/colors.dart';
+import 'package:headphone_store/widgets/brand_card.dart';
 
 class BrandNames extends StatelessWidget {
   final List names = [

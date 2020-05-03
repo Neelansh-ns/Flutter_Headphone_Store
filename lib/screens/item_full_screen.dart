@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:headphone_strore/utils/colors.dart';
+import 'package:headphone_store/utils/colors.dart';
 
 class ItemFullScreen extends StatelessWidget {
   @override

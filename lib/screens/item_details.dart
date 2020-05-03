@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:headphone_strore/screens/item_full_screen.dart';
-import 'package:headphone_strore/utils/colors.dart';
+import 'package:headphone_store/screens/item_full_screen.dart';
+import 'package:headphone_store/utils/colors.dart';
 
 class ItemDetails extends StatelessWidget {
   final String title;

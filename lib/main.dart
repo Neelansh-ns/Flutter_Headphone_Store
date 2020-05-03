@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:headphone_strore/screens/brand_names.dart';
+import 'package:headphone_store/screens/brand_names.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

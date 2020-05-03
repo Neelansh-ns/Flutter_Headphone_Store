@@ -1,4 +1,4 @@
-package com.example.headphone_strore
+package com.example.headphone_store
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

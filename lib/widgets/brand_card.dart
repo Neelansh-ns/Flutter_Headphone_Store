@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:headphone_strore/screens/item_details.dart';
+import 'package:headphone_store/screens/item_details.dart';
 
 class BrandCard extends StatelessWidget {
   final Widget logo;
